@@ -4,8 +4,8 @@ from pathlib import Path
 HEIGHT = 720
 WIDTH = 1280
 
-RAW_ROOT = Path("../data/raw")
-NORM_ROOT = Path("../data/normalized")
+RAW_ROOT = Path("../../data/raw")
+NORM_ROOT = Path("../../data/normalized")
 
 def normalize_and_save_data(category: str, n_games: int) -> None:
     for game_idx in range(1, n_games + 1):
