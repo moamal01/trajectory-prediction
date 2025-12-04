@@ -5,7 +5,11 @@ description = "Trajectory prediction using different ML techniques on the TrackN
 authors = [
     {name = "Moamal Fadhil Abdul-Mahdi", email = "moamal001@gmail.com"}
 ]
-
+dependencies = [
+"pandas",
+"pytest",
+"torch",
+]
 
 [build-system]
 requires = ["setuptools", "wheel"]
