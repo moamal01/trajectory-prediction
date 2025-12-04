@@ -1,0 +1,26 @@
+name: Unit tests
+
+on:
+  push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Test job triggered by a ${{ github.event_name }} event"
+      - run: echo "This job is now running on a ${{ runner.os }} server."
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with: 
+          python-version: '3.9.23'
+
+      - name: Install dependencies
+        run: pip install .
+
+      - name: Run unit tests
+        run: pytest -q
